@@ -30,6 +30,8 @@ namespace OHDProject
                      Configuration["ConnectionStrings:OHDConnection"]);
             });
             services.AddControllersWithViews();
+            services.AddRazorPages();
+            services.AddScoped<IRepository, EFRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
