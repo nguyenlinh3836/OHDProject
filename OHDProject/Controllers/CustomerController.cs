@@ -10,9 +10,14 @@ namespace OHDProject.Controllers
     public class CustomerController : Controller
     {
         private OHDDbContext _context;
+        private IRepository repository;
         public CustomerController(OHDDbContext ctx)
         {
             _context = ctx;
+        }
+        public CustomerController(IRepository repo)
+        {
+            repository = repo;
         }
         public IActionResult Index()
         {
