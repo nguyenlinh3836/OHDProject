@@ -184,3 +184,12 @@ C:\Users\LEGION\source\repos\OHDProject\OHDProject\obj\Debug\netcoreapp3.1\Razor
 C:\Users\LEGION\source\repos\OHDProject\OHDProject\obj\Debug\netcoreapp3.1\Razor\Views\Roles\Details.cshtml.g.cs
 C:\Users\LEGION\source\repos\OHDProject\OHDProject\obj\Debug\netcoreapp3.1\Razor\Views\Roles\Edit.cshtml.g.cs
 C:\Users\LEGION\source\repos\OHDProject\OHDProject\obj\Debug\netcoreapp3.1\Razor\Views\Roles\Index.cshtml.g.cs
+C:\Users\LEGION\source\repos\OHDProject\OHDProject\obj\Debug\netcoreapp3.1\Razor\Views\Admin\AssignRequest.cshtml.g.cs
+C:\Users\LEGION\source\repos\OHDProject\OHDProject\obj\Debug\netcoreapp3.1\Razor\Views\Facilities\Create.cshtml.g.cs
+C:\Users\LEGION\source\repos\OHDProject\OHDProject\obj\Debug\netcoreapp3.1\Razor\Views\Facilities\Delete.cshtml.g.cs
+C:\Users\LEGION\source\repos\OHDProject\OHDProject\obj\Debug\netcoreapp3.1\Razor\Views\Facilities\Details.cshtml.g.cs
+C:\Users\LEGION\source\repos\OHDProject\OHDProject\obj\Debug\netcoreapp3.1\Razor\Views\Facilities\Edit.cshtml.g.cs
+C:\Users\LEGION\source\repos\OHDProject\OHDProject\obj\Debug\netcoreapp3.1\Razor\Views\Facilities\Index.cshtml.g.cs
+C:\Users\LEGION\source\repos\OHDProject\OHDProject\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\NagivationMenu\Default.cshtml.g.cs
+C:\Users\LEGION\source\repos\OHDProject\OHDProject\obj\Debug\netcoreapp3.1\Razor\Views\Customer\CreateRequest.cshtml.g.cs
+C:\Users\LEGION\source\repos\OHDProject\OHDProject\obj\Debug\netcoreapp3.1\Razor\Views\Customer\Index.cshtml.g.cs

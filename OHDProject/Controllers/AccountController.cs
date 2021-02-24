@@ -50,8 +50,7 @@ namespace OHDProject.Controllers
         public async Task<IActionResult> Register(Account account, IFormFile Avatar)
         {
             account.Password = BCrypt.Net.BCrypt.HashPassword(account.Password);
-            account.ConfirmPassword = BCrypt.Net.BCrypt.HashPassword(account.ConfirmPassword);
-            account.RoleID = 2;
+            account.ConfirmPassword = BCrypt.Net.BCrypt.HashPassword(account.ConfirmPassword);         
             db.Accounts.Add(account);
             await db.SaveChangesAsync();
             if (Avatar != null)
@@ -116,7 +115,17 @@ namespace OHDProject.Controllers
                     {
                         var principal = new ClaimsPrincipal(identity);
                         var login = HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
-                        return RedirectToAction("Index", "Admin");
+                        return RedirectToAction("Index", "Customer");
+                    }
+                }
+                if (Role.RoleName == "Assignee")
+                {
+                    isAuthenticate = true;
+                    if (isAuthenticate)
+                    {
+                        var principal = new ClaimsPrincipal(identity);
+                        var login = HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
+                        return RedirectToAction("Index", "Assignee");
                     }
                 }
 
