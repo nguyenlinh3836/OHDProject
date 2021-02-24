@@ -91,7 +91,6 @@ namespace OHDProject.Controllers
             }
             else
             {
-                HttpContext.Session.SetString("name", _account.FirstName);
                 HttpContext.Session.SetInt32("id",_account.AccountId);
                 var Role = db.Roles.FirstOrDefault(x => x.RoleId == account.RoleID);
                 identity = new ClaimsIdentity(new[]
