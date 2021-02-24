@@ -82,7 +82,7 @@ namespace OHDProject.Controllers
             bool isAuthenticate = false;
             bool isAuthenticates = false;
 
-            var FullName = db.Accounts.FirstOrDefault(x => x.Email == email);
+            var _account= db.Accounts.FirstOrDefault(x => x.Email == email);
 
             if (account == null)
             {
@@ -91,7 +91,8 @@ namespace OHDProject.Controllers
             }
             else
             {
-                HttpContext.Session.SetString("name", FullName.FirstName);
+                HttpContext.Session.SetString("name", _account.FirstName);
+                HttpContext.Session.SetInt32("id",_account.AccountId);
                 var Role = db.Roles.FirstOrDefault(x => x.RoleId == account.RoleID);
                 identity = new ClaimsIdentity(new[]
                 {
@@ -115,7 +116,7 @@ namespace OHDProject.Controllers
                     {
                         var principal = new ClaimsPrincipal(identity);
                         var login = HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
-                        return RedirectToAction("Welcome", "Customer");
+                        return RedirectToAction("Index", "Customer");
                     }
                 }
                 if (Role.RoleName == "Assignee")

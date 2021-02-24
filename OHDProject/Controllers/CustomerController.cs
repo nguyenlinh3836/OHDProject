@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using OHDProject.Models;
+using Microsoft.AspNetCore.Http;
 
 namespace OHDProject.Controllers
 {
@@ -22,22 +24,21 @@ namespace OHDProject.Controllers
         public IActionResult WelCome()
         {
             return View();
-        }
-
+        } 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> CreateRequest(Request request,Account account,Facility facility)
+        public async Task<IActionResult> CreateRequest(Request request)
         {
             if (ModelState.IsValid)
             {
-                request.CreateTime = DateTime.Now;               
+                request.CreateTime = DateTime.Now;
+                request.requestorId = HttpContext.Session.GetInt32("id").Value;
                 _context.Add(request);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
             return View(Request);
         }
-
 
     }
 }

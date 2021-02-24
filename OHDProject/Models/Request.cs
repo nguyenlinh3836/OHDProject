@@ -16,7 +16,7 @@ namespace OHDProject.Models
         public string Remark { get; set; }
         public int FacilityId { get; set; }
         public Facility Facility { get; set; }
-        public int Assignee { get; set; }
+        public int? Assignee { get; set; }
         public int requestorId { get; set; }
         public Account Account { get; set; }       
     }
