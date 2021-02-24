@@ -9,20 +9,19 @@ namespace OHDProject.Controllers
 {
     public class CustomerController : Controller
     {
-        private OHDDbContext _context;
-        private IRepository repository;
+        private OHDDbContext _context;      
         public CustomerController(OHDDbContext ctx)
         {
             _context = ctx;
-        }
-        public CustomerController(IRepository repo)
-        {
-            repository = repo;
-        }
+        }      
         public IActionResult Index()
         {
             var List = _context.Facilities.ToList();
             return View(List);
+        }
+        public IActionResult WelCome()
+        {
+            return View();
         }
 
         [HttpPost]

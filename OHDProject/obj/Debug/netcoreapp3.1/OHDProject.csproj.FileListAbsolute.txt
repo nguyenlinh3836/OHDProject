@@ -193,3 +193,4 @@ C:\Users\LEGION\source\repos\OHDProject\OHDProject\obj\Debug\netcoreapp3.1\Razor
 C:\Users\LEGION\source\repos\OHDProject\OHDProject\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\NagivationMenu\Default.cshtml.g.cs
 C:\Users\LEGION\source\repos\OHDProject\OHDProject\obj\Debug\netcoreapp3.1\Razor\Views\Customer\CreateRequest.cshtml.g.cs
 C:\Users\LEGION\source\repos\OHDProject\OHDProject\obj\Debug\netcoreapp3.1\Razor\Views\Customer\Index.cshtml.g.cs
+C:\Users\LEGION\source\repos\OHDProject\OHDProject\obj\Debug\netcoreapp3.1\Razor\Views\Customer\Welcome.cshtml.g.cs

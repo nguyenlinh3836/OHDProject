@@ -115,7 +115,7 @@ namespace OHDProject.Controllers
                     {
                         var principal = new ClaimsPrincipal(identity);
                         var login = HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
-                        return RedirectToAction("Index", "Customer");
+                        return RedirectToAction("Welcome", "Customer");
                     }
                 }
                 if (Role.RoleName == "Assignee")
