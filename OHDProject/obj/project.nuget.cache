@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "L6i8dUKQw570PN+huLUg7D2sw0LJvncLGwv9SRLtdhKgLZ3XB+9ZzXZbVRR5l/fD1ae4lXOVY6ujjILdt9GVew==",
+  "dgSpecHash": "AtZt1KXVikU0McM0EaRSc33x88KJvDDSSirPI7HzuW7BdpXiM2JrKWOUnQyW98jz3oIzc9VyrhLxIJyaNdCE0A==",
   "success": true,
   "projectFilePath": "C:\\Users\\LEGION\\source\\repos\\OHDProject\\OHDProject\\OHDProject.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\LEGION\\.nuget\\packages\\bcrypt.net-next\\4.0.2\\bcrypt.net-next.4.0.2.nupkg.sha512",
     "C:\\Users\\LEGION\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\LEGION\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\LEGION\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",

@@ -64,8 +64,6 @@ C:\Users\LEGION\source\repos\OHDProject\OHDProject\bin\Debug\netcoreapp3.1\runti
 C:\Users\LEGION\source\repos\OHDProject\OHDProject\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
 C:\Users\LEGION\source\repos\OHDProject\OHDProject\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\Users\LEGION\source\repos\OHDProject\OHDProject\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\LEGION\source\repos\OHDProject\OHDProject\obj\Debug\netcoreapp3.1\OHDProject.csproj.CoreCompileInputs.cache
-C:\Users\LEGION\source\repos\OHDProject\OHDProject\obj\Debug\netcoreapp3.1\OHDProject.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\LEGION\source\repos\OHDProject\OHDProject\bin\Debug\netcoreapp3.1\OHDProject.deps.json
 C:\Users\LEGION\source\repos\OHDProject\OHDProject\bin\Debug\netcoreapp3.1\OHDProject.runtimeconfig.json
 C:\Users\LEGION\source\repos\OHDProject\OHDProject\bin\Debug\netcoreapp3.1\OHDProject.runtimeconfig.dev.json
@@ -77,3 +75,14 @@ C:\Users\LEGION\source\repos\OHDProject\OHDProject\obj\Debug\netcoreapp3.1\OHDPr
 C:\Users\LEGION\source\repos\OHDProject\OHDProject\obj\Debug\netcoreapp3.1\OHDProject.dll
 C:\Users\LEGION\source\repos\OHDProject\OHDProject\obj\Debug\netcoreapp3.1\OHDProject.pdb
 C:\Users\LEGION\source\repos\OHDProject\OHDProject\obj\Debug\netcoreapp3.1\OHDProject.genruntimeconfig.cache
+C:\Users\LEGION\source\repos\OHDProject\OHDProject\obj\Debug\netcoreapp3.1\OHDProject.csproj.CoreCompileInputs.cache
+C:\Users\LEGION\source\repos\OHDProject\OHDProject\obj\Debug\netcoreapp3.1\OHDProject.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\LEGION\source\repos\OHDProject\OHDProject\obj\Debug\netcoreapp3.1\Razor\Views\Account\AccessDenied.cshtml.g.cs
+C:\Users\LEGION\source\repos\OHDProject\OHDProject\obj\Debug\netcoreapp3.1\Razor\Views\Account\Login.cshtml.g.cs
+C:\Users\LEGION\source\repos\OHDProject\OHDProject\obj\Debug\netcoreapp3.1\Razor\Views\Account\PasswordChange.cshtml.g.cs
+C:\Users\LEGION\source\repos\OHDProject\OHDProject\obj\Debug\netcoreapp3.1\Razor\Views\Account\PasswordReset.cshtml.g.cs
+C:\Users\LEGION\source\repos\OHDProject\OHDProject\obj\Debug\netcoreapp3.1\Razor\Views\Account\Register.cshtml.g.cs
+C:\Users\LEGION\source\repos\OHDProject\OHDProject\obj\Debug\netcoreapp3.1\Razor\Views\Account\Welcome.cshtml.g.cs
+C:\Users\LEGION\source\repos\OHDProject\OHDProject\bin\Debug\netcoreapp3.1\BCrypt.Net-Next.dll
+C:\Users\LEGION\source\repos\OHDProject\OHDProject\obj\Debug\netcoreapp3.1\Razor\Views\Admin\Index.cshtml.g.cs
+C:\Users\LEGION\source\repos\OHDProject\OHDProject\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_AdminLayout.cshtml.g.cs
