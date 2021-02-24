@@ -22,13 +22,11 @@ namespace OHDProject.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> CreateRequest([Bind("RequestId,Subject,Detail,CreateTime,FacilityId,requestorId")] Request request,Account account,Facility facility)
+        public async Task<IActionResult> CreateRequest(Request request,Account account,Facility facility)
         {
             if (ModelState.IsValid)
             {
-                request.CreateTime = DateTime.Now;
-                request.requestorId = account.AccountId;
-                request.FacilityId = facility.FacilityId;
+                request.CreateTime = DateTime.Now;               
                 _context.Add(request);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
