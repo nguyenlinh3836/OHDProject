@@ -17,13 +17,10 @@
                             <thead>
                                 <th>Request ID</th>
                                 <th>Subject</th>
-                                <th>Description</th>
                                 <th>Create Time</th>
                                 <th>Requestor</th>
                                 <th>Facility Name</th>
-                                <th>Assignee</th>
                                 <th>Status</th>
-                                <th>Remark</th>
                                 <th>Details</th>
                             </thead>
                             <tbody>
@@ -32,15 +29,12 @@
                                     <tr>
                                         <td>@item._requests.RequestId</td>
                                         <td>@item._requests.Subject</td>
-                                        <td>@item._requests.Description</td>
                                         <td>@item._requests.CreateTime</td>
                                         <td>@item._accounts.Email</td>
                                         <td>@item._facilities.FacilityName</td>
-                                        <td>@item._requests.Assignee</td>
                                         <td>@item._requests.Status</td>
-                                        <td style="min-width:100px;">@item._requests.Remark</td>
                                         <td id="details">
-                                            <div class="card-body table-responsive" style="position: relative;top:-28px; left:-24px; text-align:center">
+                                            <div class="card-body table-responsive" style="position: relative;top:-28px; left:-24px;">
                                                 <a type="button" href="" class="btn btn-primary btn-block" data-toggle="modal" data-target="#myModal" style="width:80px; padding-left: 5px 5px; ">Details</a>
 
                                                 <!-- Modal -->
@@ -48,7 +42,7 @@
                                                     <!-- The Modal -->
                                                     <div class="modal" id="myModal">
                                                         <div class="modal-dialog">
-                                                            <div class="modal-content" style="width:1000px;position: relative;top: 60px;left:-200px; padding: 20px 20px 50px -50px;">
+                                                            <div class="modal-content" style="width:1000px;position: relative;top: 60px;left:-200px; padding: 20px 20px 50px 50px;">
                                                                 <h4>Request ID: @item._requests.RequestId</h4>
                                                                 <form method="POST" action="" style="max-width: 500px;padding-top:30px">
                                                                     <div class="form-group">
@@ -116,7 +110,7 @@
 
                                                                     <div class="form-group" style="position:relative; top: -645px;left:500px;font-size:16px;">
                                                                         <label for="endtime" class="control-label">Current Status: </label>
-                                                                        <div class="input-group">
+                                                                        <div class="input-group" style="position:relative;top:-32px;left:130px">
                                                                             @item._requests.Status
                                                                         </div>
                                                                     </div>
