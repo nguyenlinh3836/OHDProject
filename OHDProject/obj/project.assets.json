@@ -8991,19 +8991,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\LEGION\\.nuget\\packages\\": {}
+    "C:\\Users\\Admin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\LEGION\\source\\repos\\OHDProject\\OHDProject\\OHDProject.csproj",
+      "projectUniqueName": "D:\\OHD\\OHDProject\\OHDProject\\OHDProject.csproj",
       "projectName": "OHDProject",
-      "projectPath": "C:\\Users\\LEGION\\source\\repos\\OHDProject\\OHDProject\\OHDProject.csproj",
-      "packagesPath": "C:\\Users\\LEGION\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\LEGION\\source\\repos\\OHDProject\\OHDProject\\obj\\",
+      "projectPath": "D:\\OHD\\OHDProject\\OHDProject\\OHDProject.csproj",
+      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+      "outputPath": "D:\\OHD\\OHDProject\\OHDProject\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\LEGION\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -9015,6 +9015,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {}
         }
       },
@@ -9026,6 +9027,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "BCrypt.Net-Next": {
             "target": "Package",
@@ -9078,7 +9080,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.406\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
       }
     }
   }

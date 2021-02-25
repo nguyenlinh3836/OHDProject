@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.FileProviders;
 using OHDProject.Helpers;
@@ -27,10 +28,39 @@ namespace OHDProject.Controllers
             webHostEnvironment = _webHostEnvironment;
         }
         private OHDDbContext db = new OHDDbContext();
-        public IActionResult Index()
+        
+        public async Task<IActionResult> Index()
         {
-            return View();
+            return View(await db.Accounts.ToListAsync());
         }
+        public async Task<IActionResult> Details(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var account = await db.Accounts
+                .FirstOrDefaultAsync(m => m.AccountId == id);
+            if (account == null)
+            {
+                return NotFound();
+            }
+
+            return View(account);
+        }
+        
+
+        
+        
+        private bool AccountExists(int id)
+        {
+            return db.Accounts.Any(e => e.AccountId == id);
+        }
+
+
+
+
         public IActionResult Welcome()
         {
             return View();
@@ -222,6 +252,7 @@ namespace OHDProject.Controllers
             await db.SaveChangesAsync();
             return View("PasswordChange");
         }
+
 
     }
 }
