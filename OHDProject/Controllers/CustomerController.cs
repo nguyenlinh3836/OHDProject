@@ -24,7 +24,12 @@ namespace OHDProject.Controllers
         public IActionResult WelCome()
         {
             return View();
-        } 
+        }
+        public IActionResult Information()
+        {
+            return View();
+        }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> CreateRequest(Request request)

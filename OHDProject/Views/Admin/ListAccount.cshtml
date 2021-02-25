@@ -1,0 +1,48 @@
+﻿@model IEnumerable<OHDProject.Models.Account>
+@{ Layout = "_AdminLayout"; }
+
+@{
+    ViewData["Title"] = "Index";
+
+}
+<p>
+    <a asp-action="Register" asp-controller="Account" class="btn btn-primary" >Create account</a>
+</p>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th scope="col">
+                @Html.DisplayNameFor(model => model.FirstName)
+            </th>
+            <th scope="col">
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th scope="col">
+                @Html.DisplayNameFor(model => model.RoleID)
+            </th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RoleID)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.AccountId" class="btn btn-primary">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.AccountId" class="btn btn-success">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.AccountId" class="btn btn-danger" asp-controller="Admin">Delete</a>
+            </td>
+
+        </tr>
+        }
+    </tbody>
+</table>

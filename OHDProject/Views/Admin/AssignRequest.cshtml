@@ -1,5 +1,64 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿@model IEnumerable<OHDProject.Models.ViewModel1>
+@{ Layout = "_AdminLayout"; }
+<environment>
+    <link href="~/css/sb-admin-2.css" rel="stylesheet">
+</environment>
+<!-- Page Heading -->
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">List requests</h1>
+</div>
+<div class="content" style="width: fit-content;margin-left: -15px;margin-top: -15px">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card strpied-tabled-with-hover">
+                    <div class="card-body table-responsive">
+                        <table class="table table-hover table-striped table-fixed" id="table1" cellpadding="0" style="width:1580px;">
+                            <thead>
+                            <th>Request ID</th>
+                            <th>Subject</th>
+                            <th>Description</th>
+                            <th>Create Time</th>
+                            <th>Requestor ID</th>
+                            <th>Facility ID</th>
+                            <th>Facility Name</th>
+                            <th>Assignee</th>
+                            <th>End Time</th>
+                            <th>Status</th>
+                            <th>Remark</th>
+                            <th>Details</th>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>@item._requests.RequestId</td>
+                                        <td>@item._requests.Subject</td>
+                                        <td>@item._requests.Description</td>
+                                        <td>@item._requests.CreateTime</td>
+                                        <td>@item._requests.requestorId</td>
+                                        <td>@item._requests.FacilityId</td>
+                                        <td>@item._facilities.FacilityName</td>
+                                        <td>@item._requests.Assignee</td>
+                                        <td>@item._requests.EndTime</td>
+                                        <td>@item._requests.Status</td>
+                                        <td>@item._requests.Remark</td>
+                                        <td id="details">
+                                            <form action="" method="post">
+                                                <input type="submit" value="Details" class="btnshow btn-green">
+                                            </form>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+

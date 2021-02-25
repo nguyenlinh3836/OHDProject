@@ -1,24 +1,27 @@
-﻿@{ Layout = "_Layout"; }
+﻿@{ Layout = "_AdminLayout"; }
 @model IEnumerable<Account>
-
+<style>
+    a{color:white}
+</style>
 <table class="table">
-    <tr>
-        <th>Id</th>
-        <th>Name</th>
-        <th>Phone</th>
-        <th>Email</th>
-    </tr>
-    @foreach (var assign in Model)
-    {
+    <thead>
         <tr>
-            <td>@assign.AccountId</td>
-            <td>@assign.FirstName</td>
-            <td>@assign.Contact</td>
-            <td>@assign.Email</td>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Email</th>
         </tr>
-    }
-
-
-
-
+    </thead>
+    <tbody>
+        @foreach (var assign in Model)
+        {
+            <tr>
+                <td>@assign.AccountId</td>
+                <td>@assign.FirstName</td>
+                <td>@assign.Contact</td>
+                <td>@assign.Email</td>
+                <td><a class="btn btn-primary" @assign.AccountId>Assign</a></td>
+            </tr>
+        }
+    </tbody>  
 </table>

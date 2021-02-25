@@ -195,3 +195,10 @@ C:\Users\LEGION\source\repos\OHDProject\OHDProject\obj\Debug\netcoreapp3.1\Razor
 C:\Users\LEGION\source\repos\OHDProject\OHDProject\obj\Debug\netcoreapp3.1\Razor\Views\Customer\Index.cshtml.g.cs
 C:\Users\LEGION\source\repos\OHDProject\OHDProject\obj\Debug\netcoreapp3.1\Razor\Views\Customer\Welcome.cshtml.g.cs
 C:\Users\LEGION\source\repos\OHDProject\OHDProject\obj\Debug\netcoreapp3.1\Razor\Views\Admin\ListAssignee.cshtml.g.cs
+C:\Users\LEGION\source\repos\OHDProject\OHDProject\obj\Debug\netcoreapp3.1\Razor\Views\Home\AboutUs.cshtml.g.cs
+C:\Users\LEGION\source\repos\OHDProject\OHDProject\obj\Debug\netcoreapp3.1\Razor\Views\Admin\DetailAccount.cshtml.g.cs
+C:\Users\LEGION\source\repos\OHDProject\OHDProject\obj\Debug\netcoreapp3.1\Razor\Views\Admin\ListAccount.cshtml.g.cs
+C:\Users\LEGION\source\repos\OHDProject\OHDProject\obj\Debug\netcoreapp3.1\Razor\Views\Assignee\Index.cshtml.g.cs
+C:\Users\LEGION\source\repos\OHDProject\OHDProject\obj\Debug\netcoreapp3.1\Razor\Views\Shared\AboutUs.cshtml.g.cs
+C:\Users\LEGION\source\repos\OHDProject\OHDProject\obj\Debug\netcoreapp3.1\Razor\Views\Customer\Information.cshtml.g.cs
+C:\Users\LEGION\source\repos\OHDProject\OHDProject\obj\Debug\netcoreapp3.1\Razor\Views\Admin\Delete.cshtml.g.cs

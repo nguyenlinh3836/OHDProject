@@ -47,25 +47,13 @@ namespace OHDProject.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Register(Account account, IFormFile Avatar)
+        public async Task<IActionResult> Register(Account account)
         {
             account.Password = BCrypt.Net.BCrypt.HashPassword(account.Password);
             account.ConfirmPassword = BCrypt.Net.BCrypt.HashPassword(account.ConfirmPassword);         
             db.Accounts.Add(account);
-            await db.SaveChangesAsync();
-            if (Avatar != null)
-            {
-                var fileName = Path.GetFileName(Avatar.FileName);
-
-                var filepath = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "Images")).Root + $@"\{fileName}";
-
-                using (FileStream fs = System.IO.File.Create(filepath))
-                {
-                    Avatar.CopyTo(fs);
-                    fs.Flush();
-                }
-            }
-            return View("Login");
+            await db.SaveChangesAsync();        
+            return View("ListAccount");
         }
 
 
@@ -115,7 +103,7 @@ namespace OHDProject.Controllers
                     {
                         var principal = new ClaimsPrincipal(identity);
                         var login = HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
-                        return RedirectToAction("Index", "Customer");
+                        return RedirectToAction("Welcome", "Customer");
                     }
                 }
                 if (Role.RoleName == "Assignee")
@@ -135,9 +123,7 @@ namespace OHDProject.Controllers
         }
         private Account checkAccount(string email, string password)
         {
-            var account = db.Accounts.SingleOrDefault(a => a.Email.Equals(email));
-
-
+            var account = db.Accounts.SingleOrDefault(a => a.Email == email);
             if (account != null)
             {
                 if (BCrypt.Net.BCrypt.Verify(password, account.Password))

@@ -10,17 +10,18 @@
             <form method="POST" asp-controller="Account" asp-action="Login">
                 <h2 class="login-heading mb-4">Welcome!</h2>
                 <h4 class="login-heading mb-4">Please log in to continue.</h4>
-                <div class="form-label-group">
+                <p style="color:red">@ViewBag.error</p>
+                <div class="form-label-group">                   
                     <input id="Email" asp-for="Email" name="Email" type="email" class="form-control" placeholder="Email address" required autofocus>
                 </div>
-                <div class="form-label-group">
+                <div class="form-label-group">                  
                     <input id="Password" asp-for="Password" name="Password" type="password" class="form-control" placeholder="Password" required>
                 </div>
                 <div class="custom-control custom-checkbox ">
                     <input type="checkbox" class="custom-control-input" id="rememberPass">
                     <label class="custom-control-label" for="rememberPass">Remember password</label>
                 </div>
-                <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit">Sign in</button>
+                <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit" value="Login">Sign in</button>
                 <div class="text-center">
                     <a class="small" href="#">Forgot password?</a>
                 </div>
