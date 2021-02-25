@@ -73,6 +73,7 @@ namespace OHDProject.Controllers
         {
             return View();
         }
+        
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Login(string email, string password)
@@ -82,7 +83,7 @@ namespace OHDProject.Controllers
             bool isAuthenticate = false;
             bool isAuthenticates = false;
 
-            var FullName = db.Accounts.FirstOrDefault(x => x.Email == email);
+            var _account = db.Accounts.FirstOrDefault(x => x.Email == email);
 
             if (account == null)
             {
@@ -91,7 +92,9 @@ namespace OHDProject.Controllers
             }
             else
             {
-                HttpContext.Session.SetString("name", FullName.FirstName);
+                HttpContext.Session.SetInt32("id", _account.AccountId);
+                HttpContext.Session.SetString("name", _account.FirstName);
+                Console.WriteLine(HttpContext.Session.GetInt32("id"));
                 var Role = db.Roles.FirstOrDefault(x => x.RoleId == account.RoleID);
                 identity = new ClaimsIdentity(new[]
                 {
@@ -128,7 +131,6 @@ namespace OHDProject.Controllers
                         return RedirectToAction("Index", "Assignee");
                     }
                 }
-
                 return View("Welcome");
             }
 
@@ -140,10 +142,10 @@ namespace OHDProject.Controllers
 
             if (account != null)
             {
-                if (BCrypt.Net.BCrypt.Verify(password, account.Password))
-                {
+                //if (BCrypt.Net.BCrypt.Verify(password, account.Password))
+                //{
                     return account;
-                }
+                //}
             }
             return null;
         }
@@ -222,6 +224,5 @@ namespace OHDProject.Controllers
             await db.SaveChangesAsync();
             return View("PasswordChange");
         }
-
     }
 }

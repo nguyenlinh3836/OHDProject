@@ -1,0 +1,112 @@
+﻿@model IEnumerable<OHDProject.Models.ViewModel1>
+@{ Layout = "_AdminLayout"; }
+<environment>
+    <link href="~/css/sb-admin-2.css" rel="stylesheet">
+</environment>
+<!-- Page Heading -->
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">List Accounts</h1>
+</div>
+<div class="content" style="width: fit-content;margin-left: -15px;margin-top: -15px">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card strpied-tabled-with-hover">
+                    <div class="card-body table-responsive">
+                        <button type="button" href="" class="btn btn-green btn-block" data-toggle="modal" data-target="#myModal" style="width: 140px; padding:5px 5px"><i class="nc-icon nc-simple-add" style="position: relative;top: 3px"></i> Add account</button>
+                            <div class="container">
+                                <!-- The Modal -->
+                                <div class="modal" id="myModal">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content" style="width:1000px;position: relative;top: -100px;left:-200px; padding: 20px 20px 50px 50px;">
+                                            <h3>Add user</h3>
+                                            <form method="POST" action="/admin/add_user" style="max-width: 650px;padding-top:30px">
+                                                <div class="form-group">
+                                                    <label for="au_email" class="control-label" style="margin-left: 70px;">Email: </label>
+                                                    <div class="input-group">
+                                                        <input type="email" class="form-control" style="max-width: 500px;margin-left: 200px;" name="au_email" id="au_email" placeholder="Enter email">
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label for="au_username" class="control-label" style="margin-left: 70px;">User name: </label>
+                                                    <div class="input-group">
+                                                        <input type="text" class="form-control" style="max-width: 500px;margin-left: 200px;" name="au_username" id="au_username" placeholder="Enter user name">
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label for="au_role" class="control-label" style="margin-left: 70px;">Role: </label>
+                                                    <div class="input-group">
+                                                        <input type="number" class="form-control" style="max-width: 500px;margin-left: 200px;" name="au_role" id="au_role" placeholder="Enter user role">
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label for="au_phonenum" class="control-label" style="margin-left: 70px;">Phone number: </label>
+                                                    <div class="input-group">
+                                                        <input type="number" class="form-control" style="max-width: 500px;margin-left: 200px;" name="au_phonenum" id="au_phonenum" placeholder="Enter phone number">
+                                                    </div>
+                                                </div>
+
+                                                <div class="input-group">
+                                                    <div class="submitbutton">
+                                                        <a type="button" href="/admin/show_users" class="btn btn-primary btn-block cancel-btn">Cancel</a>
+                                                    </div>
+
+                                                    <div class="submitbutton">
+                                                        <button type="submit" class="btn btn-primary btn-block submit-btn" onclick="return confirm('Confirm to add the user !!!')">Submit</button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <table class="table table-hover table-striped table-fixed" id="table1" cellpadding="0" style="width:1580px;">
+                                <thead>
+                                    <th>Account ID</th>
+                                    <th>User Name</th>
+                                    <th>Email</th>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Password</th>
+                                    <th>Gender</th>
+                                    <th>Address</th>
+                                    <th>Contact</th>
+                                    <th>Role</th>
+                                    <th>Facility</th>
+                                    <th>Edit / Delete</th>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <td>@item._accounts.AccountId</td>
+                                            <td>@item._accounts.Username</td>
+                                            <td>@item._accounts.Email</td>
+                                            <td>@item._accounts.FirstName</td>
+                                            <td>@item._accounts.LastName</td>
+                                            <td>@item._accounts.Password</td>
+                                            <td>@item._accounts.Gender</td>
+                                            <td>@item._accounts.Address</td>
+                                            <td>@item._accounts.Contact</td>
+                                            <td>@item._roles.RoleName</td>
+                                            <td>@item._facilities.FacilityName</td>
+                                            <td id="edit_delete">
+                                                <input type="submit" value="Edit" onclick=" class="btnshow btn-green">
+                                                <form action="" method="post">
+                                                    <input type="hidden" name="_method" value="DELETE">
+                                                    <input type="submit" value="Delete" onclick="return confirm('Confirm to delete the account ?') " class="btnshow btn-danger">
+                                                </form>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
