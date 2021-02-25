@@ -1966,12 +1966,12 @@ fieldset[disabled] .form-control {
   
   td,
   th {
-    min-width: 200px;
+    min-width: 220px;
     height: 64px;
     border: dashed 1px lightblue;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 200px;
+    max-width: 220px;
   }
     
 .table>thead>tr>th,
