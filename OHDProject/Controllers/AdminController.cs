@@ -20,15 +20,19 @@ namespace OHDProject.Controllers
             {
                 List<Request> _requests = db.Requests.ToList();
                 List<Facility> _facilities = db.Facilities.ToList();
+                List<Account> _accounts = db.Accounts.ToList();
 
-                var listRequests = from r in _requests
-                                        join f in _facilities on r.FacilityId equals f.FacilityId into table1
-                                        from f in table1.ToList()
-                                        select new ViewModel1
-                                        {
-                                            _requests = r,
-                                            _facilities = f
-                                        };
+                var listRequests =  from r in _requests
+                                    join f in _facilities on r.FacilityId equals f.FacilityId into table1
+                                    from f in table1.ToList()
+                                    join a in _accounts on r.requestorId equals a.AccountId into table2
+                                    from a in table2.ToList()
+                                    select new ViewModel1
+                                    {
+                                        _requests = r,
+                                        _facilities = f,
+                                        _accounts = a
+                                    };
                 return View(listRequests);
             }
         }
